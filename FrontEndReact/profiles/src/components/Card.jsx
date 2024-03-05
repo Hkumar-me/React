@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Card({data, index, handleFriend}) {
-    let { profession, img, isFriend ,name } = data;
+    let { profession, img, isFriend ,name} = data;
 
   return (
     <div index={index} key={index} className='shrink-0 w-[200px] h-[300px] bg-gradient-to-r from-fuchsia-500 to-cyan-500 rounded-md overflow-hidden p-1'>

@@ -41,7 +41,7 @@ function App() {
     setRealData((prevData) => {
       return prevData.map((item, index) => {
         if (index === clickedIndex) {
-          return { ...item, isFriend: !item.isFriend };
+          return { ...item, isFriend: !item.isFriend};
         }
         return item;
       });

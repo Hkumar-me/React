@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from './components/Navbar'
 import SongCard from './components/SongCard'
 function App() {
@@ -30,18 +30,23 @@ function App() {
     }
   ];
   
-
+ let [data, setData] = useState(songsArray)
   let handleClick = (clickedIndex)=>{
-    alert(clickedIndex)
+    setData((prevData)=> prevData.map((item, index)=>{
+      if(index === clickedIndex){
+        return {...item, isadded:!item.isadded};
+      } 
+      return item;
+    }))
   }
 
 
   return (
     <>
-    <Navbar/>
+    <Navbar data={data}/>
     <div className='p-10 flex gap-7 flex-wrap'>
       {
-        songsArray.map((song, index)=><SongCard song={song} index={index}  handleClick ={handleClick} key= {index} /> )
+        data.map((song, index)=><SongCard song={song} index={index}  handleClick ={handleClick} key= {index} /> )
       }
     </div>
     </>

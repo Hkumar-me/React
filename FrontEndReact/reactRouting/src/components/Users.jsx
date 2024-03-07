@@ -10,9 +10,8 @@ function Users() {
         </h2>
         <div className="list w-full flex flex-col items-center justify-center ">
           <ul className="flex flex-col w-full gap-2 items-center justify-center ">
-           {["Harsh", "Ragnar", "Lagertha", "Floki", "Bjorn"].map((elem,index)=>(
-            <Link to={`/users/${elem}`} ><li className="text-white w-[fit] flex justify-center items-center font-semibold text-lg bg-blue-800 rounded-md px-3 py-1 cursor-pointer">
-            {elem}
+           {["Harsh", "Modi Ji", "Putin Bhai", "Biden Shaab", "Elon Musky"].map((elem,index)=>(
+            <Link to={`/users/${elem}`} ><li className="text-white w-[fit] flex justify-center items-center font-semibold text-lg bg-blue-800 rounded-md px-3 py-1 cursor-pointer">{elem}
           </li></Link>
            ))}
           </ul>
